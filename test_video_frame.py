@@ -91,7 +91,7 @@ if args.style_path:
 def loadImg(imgPath, size):
     img = Image.open(imgPath).convert('RGB')
     transform = transforms.Compose([
-                transforms.Scale(size),
+                transforms.Resize(size),
                 transforms.ToTensor()])
     return transform(img)
 
